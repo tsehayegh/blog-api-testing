@@ -4,13 +4,11 @@ const express = require('express')
 const router = express.Router();
 const uuid = require('uuid');
 
-
 const {BlogPosts} = require('./models');
 
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const now = new Date().toISOString();
-
 
 BlogPosts.create('David Walsh Blog', 'JavaScript, personal thoughts, and guids', 'David Walsh', now);
 BlogPosts.create('DAILYJS', 'JavaScript and node', 'Alex R. Young', now);
